@@ -64,7 +64,7 @@ class Scraper:
     def scrap_type_next_page(self,type_select,next_page_token="Aap_uEDczRDOtdgz1X7Fd9pOKm9aVw0hOSsESZiAnWk8XLIDgfHLvXaNC42gTxhK1tHkP50pHcq4WB9vyocZ9rMFjyak83e0FC2XvAXxzQSYA_v_IopSXrwHqOx0mJnb8jUeeF0dTd-kJbq2fgmQTb5oXpp1fw24jW3WUHFvGvbz6EjsaJ8hyW2vJXMuImGRl75ALJpL1AYMeRMOM25OhptB9UfqxeYCxYXfKT67OD7PztEuseIXuKDVJAybbfyEPTcPKWl_y-fpQbPqWWT2GyYgJZzBUGhyKgt7Qmc4k0mAFujJ0paEePfUTGX3Y7EiOOypdplj_IfHiiikootGC2btkf-TsqqCqFKMPReiqyu4t11NslabBkQR9cBzGVZFRWeIDWQuY57ONCrImCecgnRjhl6SMXExPTUR8WsRWmq8TAa6KwsAAmNs1YXeVTbh0UgIyxxWvXKPtU4oR8fQXA5uIsAImD0DTx66NodPJbtpPO8tF9bedsqqwSDu8slHa5rFbRXEKTqEJLH5UVQTUPvfNfeae8bmEm3sJvBuugHgd7HNlLTxouyKLJvEcgEq6-a5Bi1G1fW9e9KFiA4NtNb5V1dd8rQSqgAIirMv4zu6JLEWT-ck9jI1NxFFiViB4jYs_IabVjpLaWCbhxAdhg"):
         time.sleep(5)
         print(next_page_token)
-        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken={next_page_token}&key=AIzaSyDC5UvrE0Sq-G8hrscjc1dUrfYIlVdSdAs"
+        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken={next_page_token}&key={GOOGLE_API_KEY}"
         print(url)
         res  = requests.get(url)
         print(res.json())
