@@ -24,7 +24,7 @@ class Scraper:
 
     def scrap_type(self,type_select="accounting"):  #scraps the type passed
         GOOGLE_API_KEY = 'GOOGLE_API_KEY_HERE'
-        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-35.348301,149.243302&radius=3000&keyword={type_select}&key={GOOGLE_API_KEY}"
+        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-35.348301,149.243302&radius=3000&type={type_select}&key={GOOGLE_API_KEY}"
         print(url)
         res  = requests.get(url)
         print(res.json())
